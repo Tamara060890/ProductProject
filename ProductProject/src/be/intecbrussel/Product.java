@@ -14,6 +14,18 @@ public abstract class Product {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;  // zelfde object
+        if (!(o instanceof Product product)) return false; // check type
+        return productID == product.productID; // vergelijk id's
+    }
+
+    @Override
+    public int hashCode() {
+        return productID;
+    }
+
+    @Override
     public String toString() {
         return "Naam: " + name +" , productId = " + productID;
     }
