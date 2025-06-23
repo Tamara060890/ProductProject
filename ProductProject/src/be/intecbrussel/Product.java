@@ -15,7 +15,7 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " - ID: " + productID + ", Name: " + name;
+        return "Naam: " + name +" , productId = " + productID;
     }
 }
 
